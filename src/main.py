@@ -25,7 +25,7 @@ def main():
                 absolute_original = f"{URL_BASE}{relative_original}"
                 r = requests.get(absolute_original, cookies={"session": SESSION_COOKIE})
 
-                file_path = f"src/img/{dt.year}-{str(dt.month).zfill(2)}-{str(dt.day).zfill(2)} {str(dt.hour).zfill(2)}:{str(dt.minute).zfill(2)}:{str(dt.second).zfill(2)}.{ext}"
+                file_path = f"src/img/{dt.year}-{str(dt.month).zfill(2)}-{str(dt.day).zfill(2)}T{str(dt.hour).zfill(2)}-{str(dt.minute).zfill(2)}-{str(dt.second).zfill(2)}.{ext}"
                 with open(
                     file_path,
                     "wb",
